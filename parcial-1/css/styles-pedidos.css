@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap'); 
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #1EDB76;
+    background: url(../img/fondoheader.png) top center;
+    background-size: 100%;
+    /*background-attachment: fixed;*/
+}
+nav{
+    z-index: 100000;
+    width: 100%;
+    height: 10vh;
+    background-color: rgba(255, 99, 71, 0);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+nav a{
+    font-size: 25px;
+    color: white;
+    font-family: arial;
+    font-weight: bolder;
+    text-decoration: none;
+    transition: 0.3s;
+}
+nav a:hover{
+    color: #FDD100;
+}
+.cot-parallax{
+    width: 100%;
+    min-height: 120vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffeeb700;
+}
+.cot-parallax img{
+    position: absolute;
+    width: 300px;
+    border-radius: 30px;
+    bottom: 0; 
+}
+#hojas{
+    width: 100%;
+    border-radius: 0px;
+}
+#perrito{
+    width: 25%;
+    bottom: 0;
+}
+#uber{
+    left: 10%;
+}
+#rappi{
+    right: 10%;
+}
+.titulo{
+    position: absolute;
+    text-align: center;
+    margin-top: 10%;
+    transform: translateY("-50%");
+    font-family: "Concert One", sans-serif;
+    font-weight: 700;
+    font-size: 200px;
+    color: #FDD100;
+    z-index: 100;
+    transition: ease-in;
+    text-shadow: 5px 6px 0px #12723F;
+}
+.sucursalita{
+    width: 100%;
+    height: 100vh;
+    background-color: #059945;
+    display: grid;
+    grid-template-columns: 45% 55%; /* 30% para la imagen, 70% para la información */
+    
+     
+}
+.img {
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/sucursalon.png);
+    background-repeat: no-repeat; /*no se repite la imagen de fondo si esta mas chaparro que el contenedor*/
+    background-size:cover;/*la imagen se pone al tamaño del contenedor*/
+    background-position: center; /*centramos la imagen de fondo*/ 
+}
+.info-padre{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 60% 40%;
+}
+.info{
+    color: white;
+}
+.info h2{
+    font-family: "Concert One", sans-serif;
+    font-weight: 700;
+    text-decoration: underline;
+    color: #FDD100;
+    font-size: 4.1rem;
+    padding: 3%;
+}
+.info h3{
+    font-family: arial;
+    font-weight: 900;
+    font-size: 2.0rem;
+    padding-left: 3%;
+    padding-bottom: 3%;
+}
+.info p{
+    font-family: arial;
+    font-weight:600;
+    font-size: 1rem;
+    padding-left: 3%;
+}
+footer{
+    width: 100%;
+    height: 20vh;
+    background-image: url(../img/hoja-yellow.avif);
+    background-repeat: no-repeat; /*no se repite la imagen de fondo si esta mas chaparro que el contenedor*/
+    background-size:cover;/*la imagen se pone al tamaño del contenedor*/
+    background-position: center; /*centramos la imagen de fondo*/
+    background-attachment: fixed;/*esta es para el efecto parallax en cuestion*/
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    color: white;
+    font-family: arial;
+    font-weight: 900;
+    font-size: 1.5rem;
+    padding-top: 2%;
+}
+footer a{
+    color: white;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 0.8rem;
+    transition: 0.5s;
+}
+footer a:hover{
+    color: #059945;
+}

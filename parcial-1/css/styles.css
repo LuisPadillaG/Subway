@@ -1,0 +1,250 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    height: 100vh;
+    overflow: hidden;
+}
+nav{
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    height: 10vh;
+    background-color: rgba(255, 99, 71, 0);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-weight: bolder;
+}
+nav a{
+    font-size: 25px;
+    color: white;
+    font-family: arial;
+    text-decoration: none;
+    transition: 0.3s;
+}
+nav a:hover{
+    color: #FDD100;
+}
+body{ /*esta cosa del body es para nuestro 2do parallax*/
+    width: 100vw;/*se adapta al tamano de la pantalla*/
+    height: 100vh;
+    margin: 0;
+    background: #555;
+    perspective: 1px;
+    transform-style: preserve-3d;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+.contenedor::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: url(../img/fondoheader.png) top center;
+    background-size: 90%;
+    transform: translateZ(-1px) scale(2.2);
+}
+.contenedor::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: url(../img/slogan2.png) top center;
+    background-size: 65%;
+    background-repeat: no-repeat;
+    transform: translateX(-19%) translateY(25%);
+}
+/*.contenedor{  todo esto es para el basico
+    width: 100%;
+    height: 100vh;
+    background-image: url(../recursos/kamehouse.webp);
+    background-repeat: no-repeat; /*no se repite la imagen de fondo si esta mas chaparro que el contenedor*/
+    /*background-size: contain;/*la imagen se pone al tamaño del contenedor*/
+    /*background-position: center; /*centramos la imagen de fondo*/
+    /*background-attachment: fixed;/*esta es para el efecto parallax en cuestion*/
+/*}*/
+.elemento{
+    width: 40%;
+    left: 100%;
+    position: absolute;
+}
+.contenedor .elemento{
+    transform: translateZ(-0.6px) scale(2.6, 2.7) translate(-37%,20%);
+}
+.contenedor, main{
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    transform-style: preserve-3d;
+}
+main{
+    background-color: #1EDB76;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+} 
+.promo-principal{
+    background-color: #059945;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+}
+.promo-principal h2{
+    font-family: arial;
+    font-weight: 900;
+    font-size: 3.5rem;
+    text-decoration: underline; /* Aplica subrayado */
+    text-decoration-color: #FDD100; /* Color del subrayado */
+}
+.promo-principal h2 .combo {
+    color: white; /* Color del texto para "COMBO ITALIANO" */
+}
+.promo-principal h2 .dosporuno {
+    color: #FDD100; /* Color específico para el texto dentro del span */
+}
+.promo-principal h3{
+    background-color: #fdd30000;
+    align-self: flex-end;
+    margin-right: 10%;
+    font-family: arial;
+    font-weight:600;
+    font-size: 2rem;
+    color: white;
+}
+.promo-principal img{
+    width: 100%;
+}
+.promo-secundarias{
+    background-color: wheat;
+    display: grid;
+    text-align: center;
+    grid-template-areas:
+    "peque1 peque2"
+    "inter inter";
+}
+.promo-pequena1{
+    grid-area: peque1;
+    background-color: #FDD100;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+}
+.promo-pequena2{
+    grid-area: peque2;
+    background-color: #12723F;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+}
+.promo-pequena1 h2, .promo-pequena2 h2{
+    font-family: arial;
+    font-weight: 900;
+    font-size: 1.5rem;
+    text-decoration: underline; /* Aplica subrayado */
+    text-decoration-color: #FDD100; /* Color del subrayado */
+}
+.promo-pequena1 h2{
+    text-decoration-color:#12723F ;
+}
+.promo-pequena1 img{
+    width: 300px;
+}
+.promo-pequena2 img{
+    width: 220px;
+}
+.promo-pequena1 h3,.promo-pequena2 h3{
+    background-color: #fdd30000;
+    align-self: flex-end;
+    margin-right: 10%;
+    font-family: arial;
+    font-weight:600;
+    font-size: 1rem;
+    color: white;
+}
+.promo-pequena1 h2 .combo, .promo-pequena2 h2 .combo {
+    color: white; /* Color del texto para "COMBO ITALIANO" */
+}
+.promo-pequena2 h2 .dosporuno {
+    color: #FDD100; /* Color específico para el texto dentro del span */
+}
+.promo-pequena1 h2 .dosporuno{
+    color: #12723F; /* Color específico para el texto dentro del span */
+}
+.promo-intermedia{
+    grid-area: inter;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+}
+.promo-intermedia img{
+    width: 60%;
+}
+.txt{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.promo-intermedia h2{
+    font-family: arial;
+    font-weight: 900;
+    font-size: 2.3rem;
+    text-decoration: underline; /* Aplica subrayado */
+    text-decoration-color: #FDD100; /* Color del subrayado */
+}
+.promo-intermedia h3{
+    background-color: #fdd30000;
+    align-self: flex-end;
+    margin-right: 10%;
+    font-family: arial;
+    font-weight:600;
+    font-size: 1.5rem;
+    color: #12723F;
+}
+.promo-intermedia h2 .combo{
+    color: #12723F; /* Color del texto para "COMBO ITALIANO" */
+}
+.promo-intermedia h2 .dosporuno{
+    color: #FDD100; /* Color específico para el texto dentro del span */
+}
+footer{
+    width: 100%;
+    height: 20vh;
+    background-image: url(../img/hoja-yellow.avif);
+    background-repeat: no-repeat; /*no se repite la imagen de fondo si esta mas chaparro que el contenedor*/
+    background-size:cover;/*la imagen se pone al tamaño del contenedor*/
+    background-position: center; /*centramos la imagen de fondo*/
+    background-attachment: fixed;/*esta es para el efecto parallax en cuestion*/
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    color: white;
+    font-family: arial;
+    font-weight: 900;
+    font-size: 1.5rem;
+    padding-top: 2%;
+}
+footer a{
+    color: white;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 0.8rem;
+    transition: 0.5s;
+}
+footer a:hover{
+    color: #059945;
+}
